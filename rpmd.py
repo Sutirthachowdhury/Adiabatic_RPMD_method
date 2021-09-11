@@ -5,7 +5,7 @@ from numpy.random import random
 import math
 
 
-def monte_carlo(param, steps = 4000, dR = 0.5):
+def monte_carlo(param, steps = 3000, dR = 0.5):
     R = np.zeros((param.ndof,param.nb))
     ndof, nb = R.shape
     βn = param.beta/nb 

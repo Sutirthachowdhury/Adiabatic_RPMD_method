@@ -37,7 +37,8 @@ def monte_carlo(param, steps = 3000, dR = 0.5):
             R[rDof, rBead] -= dR0
     return R
 
-
+##------ this is the sampling part of the ring-polymer (fictitious harmonic ring)------
+##---- the origin of this spring comes from the Trotterization of kintetic energy term-----------------
 def ringPolymer(R,param):
     """
     Compute Ringpolymer Energy
@@ -51,6 +52,7 @@ def ringPolymer(R,param):
     for k in range(-1,nb-1):
         E+= 0.5 * M * Ω**2 * (R[k] - R[k+1])**2
     return E
+##------------------------------------------------------------------------------------
         
 def initP(param):
     nb, ndof = param.nb , param.ndof
